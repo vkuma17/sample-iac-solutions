@@ -34,3 +34,11 @@ component "postgres" {
     external = provider.external.this
   }
 }
+
+##############################################################################
+# Time sleep
+##############################################################################
+
+resource "time_sleep" "wait" {
+  create_duration = "10s"
+}
