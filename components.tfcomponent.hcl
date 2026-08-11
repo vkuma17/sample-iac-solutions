@@ -18,7 +18,7 @@ component "resource_group" {
 ##############################################################################
 
 component "slz_vpc" {
-  source  = "terraform-ibm-modules/terraform-ibm-landing-zone-vpc/ibm"
+  source  = "terraform-ibm-modules/landing-zone-vpc/ibm"
   version = "9.2.3"
 
   inputs = {
