@@ -63,6 +63,7 @@ component "slz_vpc" {
   }
 
   providers = {
-    ibm = provider.ibm.this
+    ibm  = provider.ibm.this
+    time = provider.time.this
   }
 }
