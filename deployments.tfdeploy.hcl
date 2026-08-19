@@ -1,6 +1,6 @@
 
 store "varset" "ibm_credentials" {
-  id       = "varset-hAu8JdqJpFtDUp6o" # Replace it with the ID of the HCP Terraform variable set containing IBM Cloud credentials
+  id       = "varset-tMJtffjjdUSpRueW" # Replace it with the ID of the HCP Terraform variable set containing IBM Cloud credentials
   category = "terraform"
 }
 
@@ -8,16 +8,6 @@ deployment "us-east" {
   inputs = {
     prefix           = "prefix1"
     region           = "us-east"
-    resource_tags    = ["us-east"]
-    ibmcloud_api_key = store.varset.ibm_credentials.ibmcloud_api_key # pragma: allowlist secret
-  }
-}
-
-deployment "ca-tor" {
-  inputs = {
-    prefix           = "prefix2"
-    region           = "ca-tor"
-    resource_tags    = ["ca-tor"]
     ibmcloud_api_key = store.varset.ibm_credentials.ibmcloud_api_key # pragma: allowlist secret
   }
 }
