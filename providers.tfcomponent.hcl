@@ -9,6 +9,10 @@ required_providers {
     source  = "hashicorp/time"
     version = ">= 0.9.1, < 1.0.0"
   }
+  random = {
+    source  = "hashicorp/random"
+    version = ">= 3.5.1, < 4.0.0"
+  }
 }
 
 provider "ibm" "this" {
@@ -19,5 +23,9 @@ provider "ibm" "this" {
 }
 
 provider "time" "this" {
+  config {}
+}
+
+provider "random" "this" {
   config {}
 }
